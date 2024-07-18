@@ -8,6 +8,13 @@
   font-weight: 400;
   font-style: normal;
 }
+.main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+     margin-top:130px;
+}
 
 .display-flex{
     display: flex;
@@ -73,12 +80,44 @@
     width: 100%;
 }
 
+/* main-function */
+.teams{
+    align-items: center; 
+    gap: 80px;
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+.our-features{
+    max-width: 530px;
+    /* margin-top: 20px; */
+
+}
+.Features{
+    color:#FF900E ;
+}
+.feature-title{
+    font-size: 45px;
+}
+
+
+
 /* /* responsive media qu  */
 @media screen and (max-width:576px){
-    .navbar,.nav-link{
+    .navbar,.nav-link,.teams{
+        flex-direction: column;   } 
+    .images{
+        grid-template-columns: repeat(1,1fr);
+        }
+}
+@media screen and (min-width:576px) and (max-width:992px){
+    .teams{
         flex-direction: column;
-
     }
-
+    .our-features{
+        margin: 50px;
+    }
     
 }
